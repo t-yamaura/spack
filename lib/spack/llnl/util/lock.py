@@ -160,7 +160,7 @@ class OpenFileTracker(object):
 
 
 #: Open file descriptors for locks in this process. Used to prevent one process
-#: from opening the sam file many times for different byte range locks
+#: from opening the same file many times for different byte range locks
 file_tracker = OpenFileTracker()
 
 
