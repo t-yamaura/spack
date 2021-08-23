@@ -66,7 +66,7 @@ class OpenFileTracker(object):
     1. Tracking by pid ensures that, if we fork, we don't inadvertently track the parent
        process's lockfiles. ``fcntl`` locks are not inherited across forks, so we'll
        just track new lockfiles in the child.
-    2. Tracking by inode ensures that referencs are counted per inode, and that we don't
+    2. Tracking by inode ensures that references are counted per inode, and that we don't
        inadvertently close a file whose inode still has open locks.
     3. Tracking by both pid and inode ensures that we only open lockfiles the minimum
        number of times necessary for the locks we have.
